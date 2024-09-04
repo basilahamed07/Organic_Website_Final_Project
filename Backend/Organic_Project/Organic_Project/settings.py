@@ -111,21 +111,21 @@ WSGI_APPLICATION = 'Organic_Project.wsgi.application'
 DATABASES = {
     'default': {
 # <<<<<<< HEAD basil database
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': "Organic_Website",
-#         'PORT': "5678",
-#         'USER': "postgresql",
-#         'PASSWORD': "Database@123",
-#         'HOST': "localhost",
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': "Organic_Website",
+        'PORT': "5678",
+        'USER': "postgresql",
+        'PASSWORD': "Database@123",
+        'HOST': "localhost",
 # =======
 
         # dines database
-        'ENGINE': 'django.db.backends.postgresql', 
-        'NAME': 'OrganicFoodStore',  
-        'USER': 'postgres',  
-        'PASSWORD': 'Database@123',
-        'HOST': 'localhost',  
-        'PORT': '5432',  
+        # 'ENGINE': 'django.db.backends.postgresql', 
+        # 'NAME': 'OrganicFoodStore',  
+        # 'USER': 'postgres',  
+        # 'PASSWORD': 'Database@123',
+        # 'HOST': 'localhost',  
+        # 'PORT': '5432',  
 # >>>>>>> 585e0993c81d2c85e085d80f7a23183dfa4a9604
     }
 }
