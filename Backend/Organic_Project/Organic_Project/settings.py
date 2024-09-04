@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-i&)jfhm-wdh3g6q*x^a1j$8orisi8rej5!etdnr^^^&0i@v98g
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["172.17.7.111","127.0.0.1"]
 
 
 # Application definition
@@ -107,17 +107,30 @@ WSGI_APPLICATION = 'Organic_Project.wsgi.application'
 
 
 #TEmp Database for Developing mode
+# myproject/settings.py
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': "Organic_Website",
-        'PORT': "5678",
-        'USER': "postgresql",
-        'PASSWORD': "Database@123",
-        'HOST': "localhost",
+# <<<<<<< HEAD basil database
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': "Organic_Website",
+#         'PORT': "5678",
+#         'USER': "postgresql",
+#         'PASSWORD': "Database@123",
+#         'HOST': "localhost",
+# =======
+
+        # dines database
+        'ENGINE': 'django.db.backends.postgresql', 
+        'NAME': 'OrganicFoodStore',  
+        'USER': 'postgres',  
+        'PASSWORD': 'Database@123',
+        'HOST': 'localhost',  
+        'PORT': '5432',  
+# >>>>>>> 585e0993c81d2c85e085d80f7a23183dfa4a9604
     }
 }
 
+AUTH_USER_MODEL = 'User_Table.CustomUser'
 
 ALLOWED_HOSTS = ['172.17.7.104']
 
@@ -246,5 +259,5 @@ SIMPLE_JWT = {
 
 
 import os
-MEDIA_ROOT =os.path.join(BASE_DIR,'Media-Source')
 MEDIA_URL = '/Media-Source/'
+MEDIA_ROOT =os.path.join(BASE_DIR,'Media-Source')
