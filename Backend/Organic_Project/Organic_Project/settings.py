@@ -110,13 +110,16 @@ WSGI_APPLICATION = 'Organic_Project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': "organic_website",
-        'PORT': "3306",
-        'USER': "root",
-        'PASSWORD': "",
+        'NAME': "Organic_Website",
+        'PORT': "5678",
+        'USER': "postgresql",
+        'PASSWORD': "Database@123",
         'HOST': "localhost",
     }
 }
+
+
+ALLOWED_HOSTS = ['172.17.7.104']
 
 
 # Password validation
