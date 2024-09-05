@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     "Shipping_Table",
     "User_Table",
     "category_Table",
+    "cart_table",
     # app for the django table Stop
 
     #swagger Document app
@@ -216,6 +217,9 @@ REST_FRAMEWORK = {
  
 }
 
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:4200',  # Angular app URL
+]
 
 #Simple jwt token '
 from datetime import timedelta
