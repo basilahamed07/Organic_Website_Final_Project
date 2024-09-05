@@ -1,5 +1,6 @@
 from typing import Iterable
 from django.db import models
+<<<<<<< HEAD
 import random
 # Create your models here.
 
@@ -38,3 +39,13 @@ class Shipping_Table(models.Model):
             code_shipping += random.choice(collections)
         self.Shipping_id= code_shipping
         return super().save(*awrg, **kwarg)
+=======
+from category_Table.models import Category_Table
+from django.core.validators import MaxValueValidator,MinValueValidator
+# Create your models here.
+class Shipping_table(models.Model):
+    order=models.ForeignKey(Category_Table,on_delete=models.CASCADE)
+    tracking_number=models.CharField(max_length=12,min_length=12)
+    shipping_date=models.DateField()
+    estimated_date=models.DateField()
+>>>>>>> 8934b54fac7cc6379b4766da30bbb80e5d99e8f9

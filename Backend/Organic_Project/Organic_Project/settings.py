@@ -109,11 +109,23 @@ WSGI_APPLICATION = 'Organic_Project.wsgi.application'
 # myproject/settings.py
 DATABASES = {
     'default': {
+<<<<<<< HEAD
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': "organicstore",
+        'PORT': "5432",
+        'USER': "postgres",
+=======
 # <<<<<<< HEAD basil database
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': "Organic_Website",
+<<<<<<< HEAD
         'PORT': "5432",
         'USER': "postgres",
+=======
+        'PORT': "5678",
+        'USER': "postgresql",
+>>>>>>> 5c66fdad77636fd4220a89080491bcd0617cee43
+>>>>>>> 8934b54fac7cc6379b4766da30bbb80e5d99e8f9
         'PASSWORD': "Database@123",
         'HOST': "localhost",
 # =======
