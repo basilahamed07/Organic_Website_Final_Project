@@ -109,11 +109,11 @@ WSGI_APPLICATION = 'Organic_Project.wsgi.application'
 #TEmp Database for Developing mode
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': "organic_website",
-        'PORT': "3306",
-        'USER': "root",
-        'PASSWORD': "",
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': "organicstore",
+        'PORT': "5432",
+        'USER': "postgres",
+        'PASSWORD': "Database@123",
         'HOST': "localhost",
     }
 }
