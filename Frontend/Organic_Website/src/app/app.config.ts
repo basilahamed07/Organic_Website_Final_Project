@@ -6,7 +6,7 @@ import { AboutComponent } from './Main/about/about.component';
 import { HeaderComponent } from "./header/header.component" ;
 import { FooterComponent } from "./footer/footer.component" ;
 import { LandingpageComponent } from "./landingpage/landingpage.component" ;
-
+import {RegistrationpageComponent} from "./registrationpage/registrationpage.component"
 
 
 import { routes } from './app.routes';
