@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-i&)jfhm-wdh3g6q*x^a1j$8orisi8rej5!etdnr^^^&0i@v98g
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["172.17.7.111","127.0.0.1"]
+# ALLOWED_HOSTS = ["172.17.7.111","localhost"]
 
 
 # Application definition
@@ -47,7 +47,6 @@ INSTALLED_APPS = [
     "Product_Table",
     "Shipping_Table",
     "User_Table",
-    "Wishlist_Table",
     "category_Table",
     # app for the django table Stop
 
@@ -117,10 +116,10 @@ DATABASES = {
         'USER': "postgres",
 # =======
 # <<<<<<< HEAD basil database
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': "Organic_Website",
-#         'PORT': "5678",
-#         'USER': "postgresql",
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': "Organic_Website",
+        'PORT': "5678",
+        'USER': "postgresql",
 # >>>>>>> 5c66fdad77636fd4220a89080491bcd0617cee43
         'PASSWORD': "Database@123",
         'HOST': "localhost",
@@ -139,7 +138,7 @@ DATABASES = {
 
 AUTH_USER_MODEL = 'User_Table.CustomUser'
 
-ALLOWED_HOSTS = ['172.17.7.104']
+ALLOWED_HOSTS = ['172.17.7.104', "localhost"]
 
 
 # Password validation

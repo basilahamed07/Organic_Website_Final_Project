@@ -2,6 +2,7 @@ from django.db import models
 
 from User_Table.models import CustomUser
 from Product_Table.models import Product_Table
+from Shipping_Table.models import Shipping_Table
 
 # Order_ID (Primary Key)
 # User_ID (Foreign Key referencing User)
@@ -15,6 +16,7 @@ from Product_Table.models import Product_Table
 class Order_table(models.Model):
     user=models.ForeignKey(CustomUser,on_delete=models.CASCADE)
     order_id=models.IntegerField()
+    shipping=models.ForeignKey(Shipping_Table,on_delete=models.CASCADE)
     order_date=models.DateField(auto_now=True)
     Total_amount=models.FloatField()
     products=models.ForeignKey(Product_Table)
