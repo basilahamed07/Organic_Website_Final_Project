@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class WishlistTableConfig(AppConfig):
+class CartTableConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'Wishlist_Table'
+    name = 'cart_table'

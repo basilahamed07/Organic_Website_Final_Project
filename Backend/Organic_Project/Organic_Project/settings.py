@@ -47,8 +47,8 @@ INSTALLED_APPS = [
     "Product_Table",
     "Shipping_Table",
     "User_Table",
-    "Wishlist_Table",
     "category_Table",
+    "cart_table",
     # app for the django table Stop
 
     #swagger Document app
