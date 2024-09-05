@@ -14,8 +14,8 @@ class Product_ViewSet(ModelViewSet):
     queryset = Product_Table.objects.all()
     serializer_class = Product_Serializer
     parser_classes = (parsers.FormParser,parsers.MultiPartParser,parsers.FileUploadParser)
-    authentication_classes = [JWTAuthentication]
-    permission_classes = [permissions.IsAuthenticated]
+    # authentication_classes = [JWTAuthentication]
+    # permission_classes = [permissions.IsAuthenticated]
 
 
 
