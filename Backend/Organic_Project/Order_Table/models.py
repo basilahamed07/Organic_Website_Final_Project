@@ -19,6 +19,6 @@ class Order_table(models.Model):
     shipping=models.ForeignKey(Shipping_Table,on_delete=models.CASCADE)
     order_date=models.DateField(auto_now=True)
     Total_amount=models.FloatField()
-    products=models.ForeignKey(Product_Table)
+    products=models.ForeignKey(Product_Table,on_delete=models.CASCADE)
 
 

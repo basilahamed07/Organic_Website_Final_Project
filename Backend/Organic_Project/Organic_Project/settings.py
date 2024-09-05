@@ -39,8 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     
     # app for the django table Start
-
-    "Checkout_Table",
     "Coupon_Table",
     "Order_Table",
     "Payment_Table",
@@ -112,15 +110,14 @@ DATABASES = {
     'default': {
 # <<<<<<< HEAD
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': "organicstore",
-        'PORT': "5432",
-        'USER': "postgres",
+        # 'NAME': "organicstore",
+        # 'PORT': "5432",
+        # 'USER': "postgres",
 # =======
 # <<<<<<< HEAD basil database
-        'ENGINE': 'django.db.backends.mysql',
         'NAME': "Organic_Website",
-        'PORT': "5678",
-        'USER': "postgresql",
+        'PORT': "5432",
+        'USER': "postgres",
 # >>>>>>> 5c66fdad77636fd4220a89080491bcd0617cee43
         'PASSWORD': "Database@123",
         'HOST': "localhost",
