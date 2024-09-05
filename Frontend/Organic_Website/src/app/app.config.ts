@@ -5,9 +5,10 @@ import { ContectComponent } from './Main/contect/contect.component';
 import { AboutComponent } from './Main/about/about.component';
 import { HeaderComponent } from "./header/header.component" ;
 import { FooterComponent } from "./footer/footer.component" ;
-import { LandingpageComponent } from "./landingpage/landingpage.component" ;
+// import { LandingpageComponent } from "./landingpage/landingpage.component" ;
 
-
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 
 
 import { routes } from './app.routes';
@@ -18,6 +19,7 @@ import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
 import { FormsModule } from '@angular/forms';
 import { provideHttpClient } from '@angular/common/http';
+
 
 registerLocaleData(en);
 
