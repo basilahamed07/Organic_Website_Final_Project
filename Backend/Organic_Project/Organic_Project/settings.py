@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-i&)jfhm-wdh3g6q*x^a1j$8orisi8rej5!etdnr^^^&0i@v98g
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["172.17.7.111","127.0.0.1"]
+# ALLOWED_HOSTS = ["172.17.7.111","localhost"]
 
 
 # Application definition
@@ -47,7 +47,6 @@ INSTALLED_APPS = [
     "Product_Table",
     "Shipping_Table",
     "User_Table",
-    "Wishlist_Table",
     "category_Table",
     # app for the django table Stop
 
@@ -111,10 +110,10 @@ WSGI_APPLICATION = 'Organic_Project.wsgi.application'
 DATABASES = {
     'default': {
 # <<<<<<< HEAD basil database
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': "Organic_Website",
-        'PORT': "5678",
-        'USER': "postgresql",
+        'PORT': "5432",
+        'USER': "postgres",
         'PASSWORD': "Database@123",
         'HOST': "localhost",
 # =======
@@ -132,7 +131,7 @@ DATABASES = {
 
 AUTH_USER_MODEL = 'User_Table.CustomUser'
 
-ALLOWED_HOSTS = ['172.17.7.104']
+ALLOWED_HOSTS = ['172.17.7.104', "localhost"]
 
 
 # Password validation
