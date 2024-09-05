@@ -12,18 +12,33 @@ from rest_framework_simplejwt.authentication import JWTAuthentication
 # Create your views here.
 class Product_ViewSet(ModelViewSet):
     queryset = Product_Table.objects.all()
-    serializer_class = Product_Table
+    serializer_class = Product_Serializer
     parser_classes = (parsers.FormParser,parsers.MultiPartParser,parsers.FileUploadParser)
     authentication_classes = [JWTAuthentication]
     permission_classes = [permissions.IsAuthenticated]
 
 
-    def get_serializer_class(self):
-        if self.action == 'list':
-            return Product_Serializer
-        elif self.action=='create':
-            return Product_Serializer
-        return self.serializer_class
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    # def get_serializer_class(self):
+    #     if self.action == 'list':
+    #         return Product_Serializer
+    #     elif self.action=='create':
+    #         return Product_Serializer
+    #     return self.serializer_class
     # @action(methods=['POST'],detail=True,url_path='upload-image')
     # def upload_image(self,request,pk=None):
     #     Catagory_Obj =self.get_object()

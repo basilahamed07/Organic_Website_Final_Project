@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-i&)jfhm-wdh3g6q*x^a1j$8orisi8rej5!etdnr^^^&0i@v98g
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["172.17.7.111","127.0.0.1"]
+# ALLOWED_HOSTS = ["172.17.7.111","localhost"]
 
 
 # Application definition
@@ -39,16 +39,14 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     
     # app for the django table Start
-
-    "Checkout_Table",
     "Coupon_Table",
     "Order_Table",
     "Payment_Table",
     "Product_Table",
     "Shipping_Table",
     "User_Table",
-    "Wishlist_Table",
     "category_Table",
+    "cart_table",
     # app for the django table Stop
 
     #swagger Document app
@@ -110,11 +108,17 @@ WSGI_APPLICATION = 'Organic_Project.wsgi.application'
 # myproject/settings.py
 DATABASES = {
     'default': {
+# <<<<<<< HEAD
+        'ENGINE': 'django.db.backends.postgresql',
+        # 'NAME': "organicstore",
+        # 'PORT': "5432",
+        # 'USER': "postgres",
+# =======
 # <<<<<<< HEAD basil database
-        'ENGINE': 'django.db.backends.mysql',
         'NAME': "Organic_Website",
-        'PORT': "5678",
-        'USER': "postgresql",
+        'PORT': "5432",
+        'USER': "postgres",
+# >>>>>>> 5c66fdad77636fd4220a89080491bcd0617cee43
         'PASSWORD': "Database@123",
         'HOST': "localhost",
 # =======
@@ -132,7 +136,7 @@ DATABASES = {
 
 AUTH_USER_MODEL = 'User_Table.CustomUser'
 
-ALLOWED_HOSTS = ['172.17.7.104']
+ALLOWED_HOSTS = ['172.17.7.104', "localhost"]
 
 
 # Password validation
@@ -210,6 +214,9 @@ REST_FRAMEWORK = {
  
 }
 
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:4200',  # Angular app URL
+]
 
 #Simple jwt token '
 from datetime import timedelta

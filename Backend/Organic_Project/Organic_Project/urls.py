@@ -56,9 +56,15 @@ urlpatterns = [
 #    path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
      path("api/Category/",include('category_Table.urls')),
      path("api/Product_Table/",include("Product_Table.urls")),
-     path("api/Checkout_Table/",include("Checkout_Table.urls")),
+    #  path("api/Checkout_Table/",include("Checkout_Table.urls")),
      path("api/users/",include("User_Table.urls")),
+# <<<<<<< HEAD
      path("api/coupon/",include("Coupon_Table.urls")),
+     path("api/shipping/",include("Shipping_Table.urls")),
+# =======
+     path("api/cart/",include("cart_table.urls")),
+     path("api/orders/",include("Order_Table.urls")),
+# >>>>>>> 51fd64acc2d5c0431dfe1874877c6c3dffd0ddd7
     #  path("api/User/",include("User.urls")),
      path('api/token/',swagger_auto_schema(method='post',security=[])(TokenObtainPairView.as_view()),name='token_obtain_pair'),
     path('api/token/refresh/',swagger_auto_schema(method='post',security=[])(TokenRefreshView.as_view()),name='token_refresh'),
