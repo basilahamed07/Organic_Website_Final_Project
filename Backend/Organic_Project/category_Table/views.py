@@ -41,135 +41,135 @@ class CategoryViewSet(ModelViewSet):
     #                 'message': 'dish Image uploaded Successfully'
     #             })
  
-#get all Category_Table
-    def list(self,request):
-        try:
-            Catagory_Obj = Category_Table.objects.all()
-            serializer = self.get_serializer(Catagory_Obj,many=True)
-            return Response({
-                'status': status.HTTP_200_OK,
-                'data':serializer.data
-            })
+# #get all Category_Table
+#     def list(self,request):
+#         try:
+#             Catagory_Obj = Category_Table.objects.all()
+#             serializer = self.get_serializer(Catagory_Obj,many=True)
+#             return Response({
+#                 'status': status.HTTP_200_OK,
+#                 'data':serializer.data
+#             })
  
-        except Exception as e:
-            print(e)
-            raise APIException({
-                'message':APIException.default_detail,
-                'status':APIException.status.code
-            })
+#         except Exception as e:
+#             print(e)
+#             raise APIException({
+#                 'message':APIException.default_detail,
+#                 'status':APIException.status.code
+#             })
         
         
-# create an dish 
-    def create(self,request):
-        try:
-            serializer = self.get_serializer(data=request.data)
-            if not serializer.is_valid():
-                return Response({
-                    'status': status.HTTP_400_BAD_REQUEST,
-                    'data':serializer.errors,
-                    'message':'Inavlid Data'
-                })
-            serializer.save()
-            return Response({
-                'status': status.HTTP_201_CREATED,
-                'data': serializer.data,
-                'message': 'Dish created successfully'
-            })
+# # create an dish 
+#     def create(self,request):
+#         try:
+#             serializer = self.get_serializer(data=request.data)
+#             if not serializer.is_valid():
+#                 return Response({
+#                     'status': status.HTTP_400_BAD_REQUEST,
+#                     'data':serializer.errors,
+#                     'message':'Inavlid Data'
+#                 })
+#             serializer.save()
+#             return Response({
+#                 'status': status.HTTP_201_CREATED,
+#                 'data': serializer.data,
+#                 'message': 'Dish created successfully'
+#             })
  
-        except Exception as e:
-            print(e)
-            raise APIException({
-                'message':APIException.default_detail,
-                'status':APIException.status.code
-            })
+#         except Exception as e:
+#             print(e)
+#             raise APIException({
+#                 'message':APIException.default_detail,
+#                 'status':APIException.status.code
+#             })
         
-# get single dish
+# # get single dish
 
-    def retrive(self,request,pk=None):
-        try:
-            id = pk
-            if id is not None:
-                Catagory_Obj = self.get_object()
-                serializer = self.get_serializer(Catagory_Obj)
-                return Response({
-                   'status': status.HTTP_200_OK,
-                   'data':serializer.data
-                })
+#     def retrive(self,request,pk=None):
+#         try:
+#             id = pk
+#             if id is not None:
+#                 Catagory_Obj = self.get_object()
+#                 serializer = self.get_serializer(Catagory_Obj)
+#                 return Response({
+#                    'status': status.HTTP_200_OK,
+#                    'data':serializer.data
+#                 })
             
 
  
-        except Exception as e:
-            print(e)
-            raise APIException({
-                'message':APIException.default_detail,
-                'status':APIException.status.code
-            })
-#update all fields of dish
-    def update(self,request,pk=None):
-        try:
-            Catagory_Obj = self.get_object()
-            serializer = self.get_serializer(Catagory_Obj,data=request.data,partial=False)
-            if not serializer.is_valid():
-                print(serializer.errors)
-                return Response({
-                    'status': status.HTTP_400_BAD_REQUEST,
-                    'data':serializer.errors,
-                    'message':'Inavlid Data'
-                })
-            serializer.save()
-            return Response({
-                    'status': status.HTTP_200_OK,
-                    'data':serializer.data,
-                    'message': 'Category_Table Updated Successfully'
-                })
+#         except Exception as e:
+#             print(e)
+#             raise APIException({
+#                 'message':APIException.default_detail,
+#                 'status':APIException.status.code
+#             })
+# #update all fields of dish
+#     def update(self,request,pk=None):
+#         try:
+#             Catagory_Obj = self.get_object()
+#             serializer = self.get_serializer(Catagory_Obj,data=request.data,partial=False)
+#             if not serializer.is_valid():
+#                 print(serializer.errors)
+#                 return Response({
+#                     'status': status.HTTP_400_BAD_REQUEST,
+#                     'data':serializer.errors,
+#                     'message':'Inavlid Data'
+#                 })
+#             serializer.save()
+#             return Response({
+#                     'status': status.HTTP_200_OK,
+#                     'data':serializer.data,
+#                     'message': 'Category_Table Updated Successfully'
+#                 })
  
-        except Exception as e:
-            print(e)
-            raise APIException({
-                'message':APIException.default_detail,
-                'status':APIException.status.code
-            })
-    #update specifie
-    def partial_update(self,request,pk=None):
-        try:
-            Catagory_Obj = self.get_object()
-            serializer = self.get_serializer(Catagory_Obj,data=request.data,partial=True)
-            if not serializer.is_valid():
-                print(serializer.errors)
-                return Response({
-                    'status': status.HTTP_400_BAD_REQUEST,
-                    'data':serializer.errors,
-                    'message':'Inavlid Data'
-                })
-            serializer.save()
-            return Response({
-                    'status': status.HTTP_200_OK,
-                    'data':serializer.data,
-                    'message': 'Dish Partial Updated Successfully'
-                })
+#         except Exception as e:
+#             print(e)
+#             raise APIException({
+#                 'message':APIException.default_detail,
+#                 'status':APIException.status.code
+#             })
+#     #update specifie
+#     def partial_update(self,request,pk=None):
+#         try:
+#             Catagory_Obj = self.get_object()
+#             serializer = self.get_serializer(Catagory_Obj,data=request.data,partial=True)
+#             if not serializer.is_valid():
+#                 print(serializer.errors)
+#                 return Response({
+#                     'status': status.HTTP_400_BAD_REQUEST,
+#                     'data':serializer.errors,
+#                     'message':'Inavlid Data'
+#                 })
+#             serializer.save()
+#             return Response({
+#                     'status': status.HTTP_200_OK,
+#                     'data':serializer.data,
+#                     'message': 'Dish Partial Updated Successfully'
+#                 })
  
-        except Exception as e:
-            print(e)
-            raise APIException({
-                'message':APIException.default_detail,
-                'status':APIException.status.code
-            })
+#         except Exception as e:
+#             print(e)
+#             raise APIException({
+#                 'message':APIException.default_detail,
+#                 'status':APIException.status.code
+#             })
  
-    def destroy(self,request,pk):
-        try:
-            id=pk
-            Catagory_Obj = self.get_object()
-            Catagory_Obj.delete()
+#     def destroy(self,request,pk):
+#         try:
+#             id=pk
+#             Catagory_Obj = self.get_object()
+#             Catagory_Obj.delete()
  
-            return Response({
-                'status': status.HTTP_200_OK,
-                'message':'Dish deleted successfully'
-            })
+#             return Response({
+#                 'status': status.HTTP_200_OK,
+#                 'message':'Dish deleted successfully'
+#             })
  
-        except Exception as e:
-            print(e)
-            raise APIException({
-                'message':APIException.default_detail,
-                'status':APIException.status.code
-            })
+#         except Exception as e:
+#             print(e)
+#             raise APIException({
+#                 'message':APIException.default_detail,
+#                 'status':APIException.status.code
+#             })
         
