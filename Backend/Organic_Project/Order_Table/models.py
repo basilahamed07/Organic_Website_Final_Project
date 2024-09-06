@@ -16,7 +16,7 @@ from Shipping_Table.models import Shipping_Table
 class Order_table(models.Model):
     user=models.ForeignKey(CustomUser,on_delete=models.CASCADE)
     order_id=models.IntegerField()
-    shipping=models.ForeignKey(Shipping_Table,on_delete=models.CASCADE)
+    shipping=models.ForeignKey(Shipping_Table,on_delete=models.CASCADE, null=True, blank=True)
     order_date=models.DateField(auto_now=True)
     Total_amount=models.FloatField()
     products=models.ForeignKey(Product_Table,on_delete=models.CASCADE)

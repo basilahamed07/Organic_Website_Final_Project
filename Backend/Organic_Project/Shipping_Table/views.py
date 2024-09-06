@@ -21,12 +21,28 @@ class ShipingViewSet(ModelViewSet):
     authentication_classes = [JWTAuthentication]
     permission_classes = [permissions.IsAuthenticated]
  
-    def get_serializer_class(self):
-        if self.action == 'list':
-            return ShippingSerializer
-        elif self.action == 'create':
-            return ShippingSerializer
-        # elif self.action == 'upload_image':
-        #     return catogoryImageSerializar
-        return self.serializer_class
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+    # def get_serializer_class(self):
+    #     if self.action == 'list':
+    #         return ShippingSerializer
+    #     elif self.action == 'create':
+    #         return ShippingSerializer
+    #     # elif self.action == 'upload_image':
+    #     #     return catogoryImageSerializar
+    #     return self.serializer_class
 

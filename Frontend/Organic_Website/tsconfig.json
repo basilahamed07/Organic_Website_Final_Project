@@ -10,6 +10,10 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "skipLibCheck": true,
+<<<<<<< HEAD
+=======
+    "isolatedModules": true,
+>>>>>>> a21b3a3a23108ac3abda5728b236ff742aada292
     "esModuleInterop": true,
     "sourceMap": true,
     "declaration": false,
@@ -18,7 +22,10 @@
     "importHelpers": true,
     "target": "ES2022",
     "module": "ES2022",
+<<<<<<< HEAD
     "useDefineForClassFields": false,
+=======
+>>>>>>> a21b3a3a23108ac3abda5728b236ff742aada292
     "lib": [
       "ES2022",
       "dom"

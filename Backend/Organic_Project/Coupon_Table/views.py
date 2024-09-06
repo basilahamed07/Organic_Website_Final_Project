@@ -21,14 +21,31 @@ class CouponViewSet(ModelViewSet):
     authentication_classes = [JWTAuthentication]
     permission_classes = [permissions.IsAuthenticated]
  
-    def get_serializer_class(self):
-        if self.action == 'list':
-            return CouponSerializer
-        elif self.action == 'create':
-            return CouponSerializer
-        # elif self.action == 'upload_image':
-        #     return catogoryImageSerializar
-        return self.serializer_class
+
+
+"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI1NjQ2MDg5LCJpYXQiOjE3MjU1NTk2ODksImp0aSI6ImU2YzUwMmEyYzg0MTQxZjA4NjdhNjQ5MGE3N2ZjOWQ4IiwidXNlcl9pZCI6MX0.y8C22tIPDkX2SUVs_yvaXnMA6XjD302Rs8eBJg3Jx4s"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    # def get_serializer_class(self):
+    #     if self.action == 'list':
+    #         return CouponSerializer
+    #     elif self.action == 'create':
+    #         return CouponSerializer
+    #     # elif self.action == 'upload_image':
+    #     #     return catogoryImageSerializar
+    #     return self.serializer_class
 
 
 

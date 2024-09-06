@@ -5,6 +5,7 @@
   "projects": {
     "Organic_Website": {
       "projectType": "application",
+<<<<<<< HEAD
       "schematics": {
         "@schematics/angular:component": {
           "standalone": false
@@ -16,6 +17,9 @@
           "standalone": false
         }
       },
+=======
+      "schematics": {},
+>>>>>>> a21b3a3a23108ac3abda5728b236ff742aada292
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",

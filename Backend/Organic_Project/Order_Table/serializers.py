@@ -14,3 +14,5 @@ class OrderSerializers(serializers.ModelSerializer):
         model = Order_table
         fields=['id','user_id','order_id','shipping_id','order_date','Total_amount','products_id']
         read_only_fields=['id']
+
+        shipping_id = serializers.CharField(required=False)

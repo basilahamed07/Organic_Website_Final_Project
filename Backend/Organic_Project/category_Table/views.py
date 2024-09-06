@@ -18,6 +18,20 @@ class CategoryViewSet(ModelViewSet):
     permission_classes = [permissions.IsAuthenticated]
 
 
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+
+# -----------------------------BElOW CODE ARE ERROR HANDLING PROCESS_--------------------------------
+
+
+
+>>>>>>> a21b3a3a23108ac3abda5728b236ff742aada292
     # def get_serializer_class(self):
     #     if self.action == 'list':
     #         return CategorySerializer

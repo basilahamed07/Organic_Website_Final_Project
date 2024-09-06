@@ -58,13 +58,15 @@ INSTALLED_APPS = [
 
     #Jwd Token for auth
 
-    "rest_framework_simplejwt"
+    "rest_framework_simplejwt",
 
     #cros Function app INstall here
+    "corsheaders",
 
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -262,6 +264,38 @@ SIMPLE_JWT = {
     "SLIDING_TOKEN_OBTAIN_SERIALIZER": "rest_framework_simplejwt.serializers.TokenObtainSlidingSerializer",
     "SLIDING_TOKEN_REFRESH_SERIALIZER": "rest_framework_simplejwt.serializers.TokenRefreshSlidingSerializer",
 }
+
+
+# Allow all origins (not recommended for production)
+CORS_ALLOW_ALL_ORIGINS = True
+
+# Or specify allowed origins
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:4200 ',  # Example for Angular dev server
+    'https://your-frontend-domain.com',  # Replace with your production frontend domain
+]
+
+# Optional: Allow credentials (cookies, authorization headers, etc.)
+CORS_ALLOW_CREDENTIALS = True
+
+# Optional: Specify which headers can be included in requests
+CORS_ALLOWED_HEADERS = [
+    'content-type',
+    'authorization',
+    'x-requested-with',
+]
+
+# Optional: Specify which HTTP methods are allowed
+CORS_ALLOWED_METHODS = [
+    'GET',
+    'POST',
+    'PUT',
+    'PATCH',
+    'DELETE',
+    'OPTIONS',
+]
+
+
 
 
 #media file for upload and access the media files
